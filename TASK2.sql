@@ -1,19 +1,6 @@
 /*
 Task 1. Используя операторы языка SQL, создайте табличку “sales”. Заполните ее данными.
-*/
 
--- Проверяем наличие уже существующей БД с таким же названием, если имеется - удаляем и создаем заново:
-DROP DATABASE IF EXISTS lesson_2;
-CREATE DATABASE lesson_2;
-USE lesson_2;
--- Проверяем наличие уже существующей сущности с таким же названием, если имеется - удаляем и создаем заново с указанными полями:
-DROP TABLE IF EXISTS sales;
-CREATE TABLE sales (
-	id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	order_date DATE,
-	count_product INT DEFAULT '0'
-);
--- Наполняем сущность 'sales' данными:
 INSERT INTO `sales` (order_date, count_product)
 VALUES 
 ('2022-01-01', 156),
@@ -43,15 +30,7 @@ Task 3. Создайте таблицу “orders”, заполните ее з
 CLOSED - «Order is closed»; CANCELLED - «Order is cancelled»
 */
 
--- Проверяем наличие уже существующей сущности с таким же названием, если имеется - удаляем и создаем заново с указанными полями:
-DROP TABLE IF EXISTS orders;
-CREATE TABLE orders (
-	id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-	employee_id VARCHAR(5) NOT NULL UNIQUE DEFAULT 'e00',
-	amount FLOAT(7,2) NOT NULL DEFAULT '0.00',
-    order_status VARCHAR(15) NOT NULL DEFAULT 'OPEN'
-);
--- Наполняем сущность 'orders' данными:
+-- 3. Создание таблицы "orders" и заполнение ее данными:
 INSERT INTO `orders` (employee_id, amount, order_status)
 VALUES 
 ('e03', 15.00, 'OPEN'),
