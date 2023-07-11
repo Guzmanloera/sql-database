@@ -1,8 +1,8 @@
 -- 1. Создание БД
-CREATE DATABASE IF NOT EXISTS HW3; -- Создаем БД, если она не существует 
+CREATE DATABASE IF NOT EXISTS task3; -- Создаем БД, если она не существует 
 
 -- 2. Выбор БД
-USE HW3;
+USE task3;
 
 -- 3. Создание таблицы с персоналом
 DROP TABLE IF EXISTS staff; -- Удаляем таблицу, если она существует
