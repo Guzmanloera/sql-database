@@ -1,8 +1,8 @@
 -- 1. Создание БД
-CREATE DATABASE IF NOT EXISTS DZ3; -- Создаем БД, если она не существует 
+CREATE DATABASE IF NOT EXISTS HW3; -- Создаем БД, если она не существует 
 
 -- 2. Выбор БД
-USE DZ3;
+USE HW3;
 
 -- 3. Создание таблицы с персоналом
 DROP TABLE IF EXISTS staff; -- Удаляем таблицу, если она существует
